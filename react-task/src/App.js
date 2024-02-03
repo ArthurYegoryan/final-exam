@@ -1,5 +1,6 @@
 import './App.css';
 import Button from './components/buttons/Button';
+import Modal from "./components/modal/Modal";
 import { useDispatch, useSelector } from 'react-redux';
 import { openCloseModal } from './redux/slices/modalSlice';
 
@@ -15,7 +16,7 @@ function App() {
     <div className="App">
       <Button label="Click me!" onClick={onClickHandler} />
       {isModalOpen &&
-        <h1>Open modal</h1>
+        <Modal />
       }
     </div>
   );
